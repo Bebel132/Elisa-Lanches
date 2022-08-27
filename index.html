@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elisa Lanches</title>
+    <script src="https://kit.fontawesome.com/4b1186e948.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    <header>
+        <div class="contato">
+            <span>entre em contato <i class="fas fa-solid fa-phone"></i></span>
+        </div>
+        <div class="menu">
+            <ul class="menu-lista">
+                <li class="menu_lista-itens">INICIO</li>
+                <li class="menu_lista-itens">QUEM SOMOS</li>
+                <li class="menu_lista-itens">CARDÁPIO</li>
+            </ul>
+        </div>
+        <div class="menu-mobile">
+            <ul class="menu-lista">
+                <li class="menu_lista-itens">INICIO</li>
+                <li class="menu_lista-itens">QUEM SOMOS</li>
+                <li class="menu_lista-itens">CARDÁPIO</li>
+            </ul>
+        </div>
+        <i class="fas fa-solid fa-bars"></i>
+        <img src="assets/images/logo.svg" alt="logo" class="menu-logo">
+    </header>
+    <div class="parallax"></div>
+    <main>
+        <img src="assets/images/divisaokk.svg" alt="" class="divisao">
+        <section class="boasVindas">
+            <div class="boasVindas-texto">
+                <h1 class="boasVindas_texto-h1">
+                    Bem-vindo(a) a Elisa Lanches
+                </h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet tellus nec ex finibus hendrerit. Integer rhoncus nibh nec dictum porttitor. Curabitur dapibus libero a pellentesque fermentum. Suspendisse vitae magna sit amet ante hendrerit hendrerit.</p>
+                <p>Pellentesque fermentum. Suspendisse vitae magna sit amet ante hendrerit hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec lacus suscipit, auctor justo ac,</p>
+            </div>
+            <img src="assets/images/boasVindasImg.png" alt="" class="boasVindas-img">
+        </section>
+        <img src="assets/images/divisaokk.svg" alt="" class="divisao">
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(".fa-bars").click(() => {
+            $(".menu-mobile").slideToggle("slow");
+        })
+    </script>
+</body>
+</html>
