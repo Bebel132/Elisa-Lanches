@@ -3,4 +3,5 @@ $(document).ready(() => {
 })
 $(".fa-bars").click(() => {
     $(".menu-mobile").slideToggle("slow");
+    $(".fa-bars").toggleClass("fa-x");
 })
