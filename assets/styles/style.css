@@ -20,6 +20,8 @@ body {
     font-family: var(--fonte-2);
 }
 
+/********* HEADER *********/
+
 .contato {
     width: 100%;
     text-align: center;
@@ -111,7 +113,7 @@ body {
     }
 }
 
-/* 1100px */
+/********* MAIN *********/
 
 .parallax {
     -webkit-box-shadow: inset 0px 14px 20px -4px rgba(41,35,44,0.72); 
@@ -141,6 +143,12 @@ main {
     width: 100%;
 }
 
+section {
+    font-family: var(--fonte-1);
+}
+
+/* BOAS VINDAS */
+
 .boasVindas {
     width: 100%;
     display: flex;
@@ -152,7 +160,6 @@ main {
     padding: 0 1rem;
     width: 500px;
     font-size: large;
-    font-family: var(--fonte-1);
 }
 
 .boasVindas-texto p:last-child {
@@ -165,11 +172,134 @@ main {
     width: 100%;
 }
 
-.boasVindas-texto h1 {
+h1 {
     font-weight: bolder;
 }
 
 .boasVindas-texto p {
     text-indent: 1.5rem;
     margin: 1rem 0;
+}
+
+/* DELICIAS */
+
+.delicias-container {
+    width: 100%;
+}
+
+.delicias-container h1 {
+    margin-left: 1rem;
+}
+
+.delicias-grid {
+    margin: 2rem 0;
+    display: grid;
+}
+
+.delicias_grid-item:nth-child(1) {
+    grid-area: esfirra;
+    display: flex;
+    flex-direction: column;
+    justify-items: stretch;
+}
+
+.delicias_grid-item:nth-child(1) .delicias_grid_item-img {
+    width: 100%;
+    height: 12rem;
+    background-image: url("../images/esfirra.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.delicias_grid-item:nth-child(2) {
+    grid-area: coxinha;
+    background-image: url("../images/coxinha.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15rem;
+    height: 10rem;
+}
+
+.delicias_grid-item:nth-child(3) {
+    grid-area: paopizza;
+    background-image: url("../images/paopizza.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 15rem;
+    height: 10rem;
+}
+
+.delicias_grid-item:nth-child(4) {
+    grid-area: paocombanana;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+.delicias_grid-item:nth-child(4) .delicias_grid_item-img {
+    width: 100%;
+    height: 12rem;
+    background-image: url("../images/paoComBanana.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.delicias_grid-item {
+    -webkit-box-shadow: 0px 0px 13px -1px #3D3D3D; 
+    box-shadow: 0px 0px 13px -1px #3D3D3D;
+    margin: .7rem;
+    border-radius: 5px;
+}
+
+.delicias_grid_item-texto {
+    padding: .5rem 1rem;
+}
+
+.delicias_grid_item-texto h1 {
+    margin: 0;
+}
+
+.delicias_grid_item-texto p {
+    font-family: var(--fonte-2);
+    margin: 1rem 0;
+}
+
+.grid-template-area {
+    grid-template-areas:
+        "esfirra coxinha paocombanana"
+        "esfirra paopizza paocombanana"
+    ;
+}
+
+@media screen and (max-width: 1000px) {
+    .grid-template-area {
+        grid-template-areas:
+            "esfirra paocombanana"
+            "esfirra paocombanana"
+            "coxinha paopizza"
+        ;
+    }
+
+    .delicias_grid-item:nth-child(2){
+        justify-self: end;
+    }
+
+    .delicias_grid-item:nth-child(3){
+        justify-self: start;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .grid-template-area {
+        grid-template-areas:
+            "esfirra esfirra"
+            "paocombanana paocombanana"
+            "coxinha paopizza"
+        ;
+    }
+
+    .delicias_grid-item:nth-child(2), .delicias_grid-item:nth-child(3) {
+        width: 80%;
+    }
 }
