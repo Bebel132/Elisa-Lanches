@@ -213,20 +213,42 @@ h1 {
 
 .delicias_grid-item:nth-child(2) {
     grid-area: coxinha;
-    background-image: url("../images/coxinha.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 15rem;
     height: 10rem;
+    overflow: hidden;
 }
 
 .delicias_grid-item:nth-child(3) {
     grid-area: paopizza;
-    background-image: url("../images/paopizza.png");
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 15rem;
     height: 10rem;
+    overflow: hidden;
+}
+
+.pequeno-img {
+    width: 100%;
+    height: 100%;
+    transition: .2s;
+}
+
+.coxinha {
+    background-image: url("../images/coxinha.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.paopizza {
+    background-image: url("../images/paopizza.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.delicias_grid-item:nth-child(2):hover .pequeno-img {
+    transform: scale(1.2);
+}
+
+.delicias_grid-item:nth-child(3):hover .pequeno-img {
+    transform: scale(1.2);
 }
 
 .delicias_grid-item:nth-child(4) {
@@ -262,6 +284,7 @@ h1 {
 
 .delicias_grid_item-texto p {
     font-family: var(--fonte-2);
+    color: var(--cor-3);
     margin: 1rem 0;
 }
 
@@ -300,6 +323,6 @@ h1 {
     }
 
     .delicias_grid-item:nth-child(2), .delicias_grid-item:nth-child(3) {
-        width: 80%;
+        width: 100%;
     }
 }
