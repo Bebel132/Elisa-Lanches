@@ -177,7 +177,8 @@ section {
 
 .boasVindas-img {
     max-width: 27rem;
-    width: 100%;
+    width: 95%;
+    padding: 0 1rem;
 }
 
 h1 {
@@ -331,7 +332,7 @@ h1 {
     }
 
     .delicias_grid-item:nth-child(2), .delicias_grid-item:nth-child(3) {
-        width: 100%;
+        width: 85%;
     }
 }
 
@@ -352,6 +353,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     margin: auto;
+    padding: 1rem;
   }
   
   .redes-sociais:nth-last-child(3) {
